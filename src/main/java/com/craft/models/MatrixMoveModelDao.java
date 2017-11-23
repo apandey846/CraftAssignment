@@ -6,5 +6,5 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Transactional
 public interface MatrixMoveModelDao extends CrudRepository<MatrixMoveModel, Long>{
-	public Iterable<MatrixMoveModel> findAllByOrderByIdAsc();
+	public Iterable<MatrixMoveModel> findByCraftUserGameModel(CraftUserGameModel craftUserGame);
 }

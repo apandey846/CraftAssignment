@@ -5,5 +5,5 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Transactional
 public interface CraftUserGameModelDao extends CrudRepository<CraftUserGameModel, Long>{
-	public Iterable<CraftUserGameModel> findAllByOrderByIdAsc();
+	public CraftUserGameModel findById(long id);
 }
