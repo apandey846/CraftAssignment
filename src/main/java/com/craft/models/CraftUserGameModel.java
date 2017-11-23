@@ -23,6 +23,9 @@ public class CraftUserGameModel {
 	private String firstPlayerName;
 	private String secondPlayerName;
 	private String currentStatus;
+	private String playerMove;
+	private String firstPlayerSymbol;
+	private String secondPlayerSymbol;
 	private Date created;
 	private Date modified;
 
@@ -34,14 +37,17 @@ public class CraftUserGameModel {
 	}
 
 	public CraftUserGameModel(String competitionName, String firstPlayerName, String secondPlayerName,
-			String currentStatus) {
+			String currentStatus, String firstPlayerChar, String secondPlayerChar) {
 		super();
 		this.competitionName = competitionName;
 		this.firstPlayerName = firstPlayerName;
 		this.secondPlayerName = secondPlayerName;
 		this.currentStatus = currentStatus;
+		this.playerMove = firstPlayerName.length() >= secondPlayerName.length() ? firstPlayerName : secondPlayerName;
 		this.created = new Timestamp(new Date().getTime());
 		this.modified = new Timestamp(new Date().getTime());
+		this.firstPlayerSymbol = firstPlayerSymbol;
+		this.secondPlayerSymbol = secondPlayerSymbol;
 	}
 
 	public long getId() {
@@ -100,6 +106,30 @@ public class CraftUserGameModel {
 		this.modified = modified;
 	}
 
+	public String getPlayerMove() {
+		return playerMove;
+	}
+
+	public void setPlayerMove(String playerMove) {
+		this.playerMove = playerMove;
+	}
+
+	public String getFirstPlayerSymbol() {
+		return firstPlayerSymbol;
+	}
+
+	public void setFirstPlayerSymbol(String firstPlayerSymbol) {
+		this.firstPlayerSymbol = firstPlayerSymbol;
+	}
+
+	public String getSecondPlayerSymbol() {
+		return secondPlayerSymbol;
+	}
+
+	public void setSecondPlayerSymbol(String secondPlayerSymbol) {
+		this.secondPlayerSymbol = secondPlayerSymbol;
+	}
+
 	public List<MatrixMoveModel> getMatrixMoveModel() {
 		return matrixMoveModel;
 	}
@@ -112,7 +142,9 @@ public class CraftUserGameModel {
 	public String toString() {
 		return "CraftUserGameModel [id=" + id + ", competitionName=" + competitionName + ", firstPlayerName="
 				+ firstPlayerName + ", secondPlayerName=" + secondPlayerName + ", currentStatus=" + currentStatus
-				+ ", created=" + created + ", modified=" + modified + ", matrixMoveModel=" + matrixMoveModel + "]";
+				+ ", playerMove=" + playerMove + ", firstPlayerSymbol=" + firstPlayerSymbol + ", secondPlayerSymbol="
+				+ secondPlayerSymbol + ", created=" + created + ", modified=" + modified + ", matrixMoveModel="
+				+ matrixMoveModel + "]";
 	}
 
 }

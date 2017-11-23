@@ -1,5 +1,6 @@
 package com.craft.models;
 
+import java.sql.Timestamp;
 import java.util.Date;
 
 import javax.persistence.CascadeType;
@@ -32,16 +33,14 @@ public class MatrixMoveModel {
 		// TODO Auto-generated constructor stub
 	}
 
-	public MatrixMoveModel(long id, int mRow, int mColumn, String mValue, String playerName, Date created,
-			Date modified, CraftUserGameModel craftUserGameModel) {
+	public MatrixMoveModel(int mRow, int mColumn, String mValue, String playerName, CraftUserGameModel craftUserGameModel) {
 		super();
-		this.id = id;
 		this.mRow = mRow;
 		this.mColumn = mColumn;
 		this.mValue = mValue;
 		this.playerName = playerName;
-		this.created = created;
-		this.modified = modified;
+		this.created = new Timestamp(new Date().getTime());
+		this.modified = new Timestamp(new Date().getTime());
 		this.craftUserGameModel = craftUserGameModel;
 	}
 

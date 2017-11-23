@@ -5,21 +5,21 @@ public class StartGameRequest {
 	String firstPlayerName;
 	String secondPlayerName;
 	String gameName;
-	char firstPlayerChar;
-	char secondPlayerChar;
+	String firstPlayerSymbol;
+	String secondPlayerSymbol;
 
 	public StartGameRequest() {
 		super();
 	}
 
-	public StartGameRequest(String firstPlayerName, String secondPlayerName, String gameName, char firstPlayerChar,
-			char secondPlayerChar) {
+	public StartGameRequest(String firstPlayerName, String secondPlayerName, String gameName, String firstPlayerSymbol,
+			String secondPlayerSymbol) {
 		super();
 		this.firstPlayerName = firstPlayerName;
 		this.secondPlayerName = secondPlayerName;
 		this.gameName = gameName;
-		this.firstPlayerChar = firstPlayerChar;
-		this.secondPlayerChar = secondPlayerChar;
+		this.firstPlayerSymbol = firstPlayerSymbol;
+		this.secondPlayerSymbol = secondPlayerSymbol;
 	}
 
 	public String getFirstPlayerName() {
@@ -38,20 +38,20 @@ public class StartGameRequest {
 		this.secondPlayerName = secondPlayerName;
 	}
 
-	public char getFirstPlayerChar() {
-		return firstPlayerChar;
+	public String getFirstPlayerSymbol() {
+		return firstPlayerSymbol;
 	}
 
-	public void setFirstPlayerChar(char firstPlayerChar) {
-		this.firstPlayerChar = firstPlayerChar;
+	public void setFirstPlayerSymbol(String firstPlayerSymbol) {
+		this.firstPlayerSymbol = firstPlayerSymbol;
 	}
 
-	public char getSecondPlayerChar() {
-		return secondPlayerChar;
+	public String getSecondPlayerSymbol() {
+		return secondPlayerSymbol;
 	}
 
-	public void setSecondPlayerChar(char secondPlayerChar) {
-		this.secondPlayerChar = secondPlayerChar;
+	public void setSecondPlayerSymbol(String secondPlayerSymbol) {
+		this.secondPlayerSymbol = secondPlayerSymbol;
 	}
 
 	public String getGameName() {
@@ -65,7 +65,8 @@ public class StartGameRequest {
 	@Override
 	public String toString() {
 		return "StartGameRequest [firstPlayerName=" + firstPlayerName + ", secondPlayerName=" + secondPlayerName
-				+ ", firstPlayerChar=" + firstPlayerChar + ", secondPlayerChar=" + secondPlayerChar + "]";
+				+ ", gameName=" + gameName + ", firstPlayerSymbol=" + firstPlayerSymbol + ", secondPlayerSymbol="
+				+ secondPlayerSymbol + "]";
 	}
 
 }
