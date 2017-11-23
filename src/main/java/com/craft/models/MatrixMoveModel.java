@@ -33,7 +33,8 @@ public class MatrixMoveModel {
 		// TODO Auto-generated constructor stub
 	}
 
-	public MatrixMoveModel(int mRow, int mColumn, String mValue, String playerName, CraftUserGameModel craftUserGameModel) {
+	public MatrixMoveModel(int mRow, int mColumn, String mValue, String playerName,
+			CraftUserGameModel craftUserGameModel) {
 		super();
 		this.mRow = mRow;
 		this.mColumn = mColumn;

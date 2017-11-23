@@ -37,7 +37,7 @@ public class CraftUserGameModel {
 	}
 
 	public CraftUserGameModel(String competitionName, String firstPlayerName, String secondPlayerName,
-			String currentStatus, String firstPlayerChar, String secondPlayerChar) {
+			String currentStatus, String firstPlayerSymbol, String secondPlayerSymbol) {
 		super();
 		this.competitionName = competitionName;
 		this.firstPlayerName = firstPlayerName;
